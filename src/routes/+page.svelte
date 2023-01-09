@@ -24,11 +24,14 @@
 </script>
 
 <style>
-  body{
-  opacity: 0.8;
+  .hero-background{
+    opacity: 0.8;
   background-image:  radial-gradient(#638fb4 0.6000000000000001px, transparent 0.6000000000000001px), radial-gradient(#638fb4 0.6000000000000001px, transparent 0.6000000000000001px);
   background-size: 24px 24px;
   background-position: 0 0,12px 12px;
+  z-index:9;
+  max-width: 100%;
+  max-width: 100%;
   }
 
   .hero-section{
@@ -38,10 +41,10 @@
     align-items: center;
     flex-direction: column;
     gap:3rem;
+
   }
 
   .hero-text{
-    
     text-align: center;
     display:flex;
     font-weight: bold;
@@ -76,7 +79,7 @@
     </SideNavItems>
   </SideNav>
 </Header>
-<body>
+<div class="hero-background">
   <div class="hero-section">
     <h1 class="hero-text">Streamline the Internship / Co-op job searching experience.</h1>
     <h4 class="hero-description">Delete those endless Chrome tabs by compiling all aspects of the job search experience into one platform.</h4>
@@ -86,4 +89,5 @@
       <Button kind="tertiary">Learn More</Button>
     </div>
   </div>
-</body>
+</div>
+
