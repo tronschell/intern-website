@@ -126,7 +126,7 @@
       <h4 class="hero-description">Delete those endless Chrome tabs by compiling all aspects of the job search experience into one unified platform.</h4>
       
       <div class="hero-button-section">
-        <Button tooltipAlignment="center">Sign Up</Button>
+        <Button tooltipAlignment="center" href="/auth">Sign Up</Button>
         <Button kind="tertiary">Learn More</Button>
       </div>
 
