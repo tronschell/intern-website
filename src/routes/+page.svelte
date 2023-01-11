@@ -20,7 +20,9 @@
   import "carbon-components-svelte/css/g90.css";
   
   let isSideNavOpen = false;
-  const imgUrl = new URL('/Users/tronschell/Documents/JS/intern-website/static/business-dashboard-example.png', import.meta.url).href
+  const dashboardImgUrl = new URL('/Users/tronschell/Documents/JS/intern-website/static/business-dashboard-example.png', import.meta.url).href
+  const workingImgUrl = new URL('/Users/tronschell/Documents/JS/intern-website/static/man-working-on-desktop-pc-in-office-HN72X1.jpg', import.meta.url).href
+
 
 </script>
 
@@ -35,16 +37,14 @@
   }
 
   body{
-    opacity: 0.8;
     background-image:  radial-gradient(#638fb4 0.6000000000000001px, transparent 0.6000000000000001px), radial-gradient(#638fb4 0.6000000000000001px, transparent 0.6000000000000001px);
   background-size: 24px 24px;
   background-position: 0 0,12px 12px;
-    
+    z-index: 0;
   }
 
   .hero-section{
     padding-top: 10rem;
-    
     display:flex;
     justify-content:center;
     align-items: center;
@@ -58,7 +58,7 @@
     text-align: center;
     display:flex;
     font-weight: bold;
-    width:45rem;
+    width:75vw;
     height:auto;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -89,18 +89,25 @@
 
   .info-section-one-textblock{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    gap:5rem;
     
   }
 
   .info-section-one-text{
     text-align: center;
     display:flex;
-    width:45rem;
+    width:75%;
     height:auto;
     font-size: 16px;
     color:gainsboro;
     transition: ease-in 0.7s;
+    align-items: center;
+    justify-content: center;
+    
   }
 </style>
 
@@ -123,13 +130,18 @@
         <Button kind="tertiary">Learn More</Button>
       </div>
 
-      <img class="dashboard-image" src={imgUrl} alt="placeholder-image">
+      <img class="dashboard-image" src={dashboardImgUrl} alt="placeholder-image">
     </div>
   </div>
 
   <div class="info-section-one">
     <div class="info-section-one-textblock">
+      <h4 class="info-section-one-text">Read company reviews with pay statistics from anonymous sources.</h4>
       <h4 class="info-section-one-text">Find jobs from multiple different sources including company websites, Indeed.com, Glassdoor.com, and more.</h4>
+      <h4 class="info-section-one-text">Use our job application tracker to manage the status of your applications for different companies without needing to use a spreadsheet.</h4>
+    </div>
+    <div class="info-section-two">
+      <img src={workingImgUrl} alt="placeholder-image-two">
     </div>
     
   </div>
